@@ -1,9 +1,23 @@
 <template>
-  <div class="min-h-screen flex items-center justify-center bg-gray-100">
-    <div class="bg-white rounded-xl shadow p-10 w-full max-w-lg text-center flex flex-col items-center">
-      <h1 class="text-7xl font-extrabold text-blue-600 mb-4">404</h1>
-      <p class="text-lg text-gray-700 mb-6">Page not found. The page you are looking for does not exist.</p>
-      <a href="/dashboard" class="inline-block px-6 py-3 rounded-lg bg-blue-600 text-white font-bold shadow hover:bg-blue-700 transition">Go to Dashboard</a>
+  <main class="grid h-screen place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
+    <div class="text-center">
+      <p class="text-base font-semibold text-indigo-600">404</p>
+      <h1 class="mt-4 text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl">
+        Page not found
+      </h1>
+      <p class="mt-6 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
+        Sorry, we couldn’t find the page you’re looking for.
+      </p>
+      <div class="mt-10 flex items-center justify-center gap-x-6">
+        <router-link
+          to="/dashboard"
+          class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          >Go back dashboard
+        </router-link>
+        <a href="#" class="text-sm font-semibold text-gray-900"
+          >Contact support <span aria-hidden="true">&rarr;</span></a
+        >
+      </div>
     </div>
-  </div>
-</template> 
+  </main>
+</template>
