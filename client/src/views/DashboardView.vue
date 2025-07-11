@@ -7,7 +7,7 @@ function toggleMore() {
 </script>
 <template>
   <div class="min-h-screen bg-gray-100 flex flex-col">
-    <header class="w-full bg-white shadow-md flex items-center justify-between px-6 h-16 z-10">
+    <header class="w-full bg-white flex items-center justify-between px-6 h-16 z-10">
       <div class="text-xl font-bold text-blue-600 tracking-tight">Smart Learning</div>
       <div class="flex items-center gap-4">
         <button class="rounded-full bg-blue-50 p-2 hover:bg-blue-100">
@@ -34,7 +34,7 @@ function toggleMore() {
     </header>
     <div class="flex flex-1 h-[calc(100vh-4rem)]">
       <aside
-        class="hidden md:flex flex-col w-60 bg-white border-r border-gray-200 py-8 px-4 gap-2 fixed top-16 left-0 h-[calc(100vh-4rem)] z-20 overflow-y-auto"
+        class="hidden md:flex flex-col w-72 bg-white border-r border-gray-200 py-8 px-4 gap-2 fixed top-16 left-0 h-[calc(100vh-4rem)] z-20 overflow-y-auto"
       >
         <nav class="flex flex-col gap-2">
           <div class="mb-2">
@@ -174,7 +174,7 @@ function toggleMore() {
         </nav>
       </aside>
       <main
-        class="flex-1 p-6 flex flex-col gap-8 ml-0 md:ml-60 overflow-y-auto h-[calc(100vh-4rem)]"
+        class="flex-1 p-6 flex flex-col gap-8 ml-0 md:ml-72 overflow-y-auto h-[calc(100vh-4rem)]"
       >
         <router-view />
       </main>
