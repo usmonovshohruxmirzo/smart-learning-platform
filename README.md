@@ -1,1 +1,1 @@
-# smart-learning-platform
+# smart-learning-platform (Vue3 + Tailwind + Django)
