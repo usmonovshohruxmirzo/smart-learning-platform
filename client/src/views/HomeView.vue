@@ -4,15 +4,15 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
       <div class="bg-white rounded-xl shadow p-6 flex flex-col items-start">
         <font-awesome-icon :icon="['fas', 'book-open']" class="text-3xl text-blue-600 mb-2" />
-        <span class="text-lg font-semibold">4 Courses Enrolled</span>
+        <span class="text-lg font-semibold text-black">4 Courses Enrolled</span>
       </div>
       <div class="bg-white rounded-xl shadow p-6 flex flex-col items-start">
         <font-awesome-icon :icon="['fas', 'certificate']" class="text-3xl text-green-600 mb-2" />
-        <span class="text-lg font-semibold">2 Certificates</span>
+        <span class="text-lg font-semibold text-black">2 Certificates</span>
       </div>
       <div class="bg-white rounded-xl shadow p-6 flex flex-col items-start">
         <font-awesome-icon :icon="['fas', 'star']" class="text-3xl text-yellow-500 mb-2" />
-        <span class="text-lg font-semibold">12 Reviews</span>
+        <span class="text-lg font-semibold text-black">12 Reviews</span>
       </div>
     </div>
     <div class="bg-white rounded-xl shadow p-6">
@@ -24,4 +24,4 @@
       </ul>
     </div>
   </div>
-</template> 
+</template>

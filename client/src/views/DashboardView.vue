@@ -32,9 +32,10 @@ function toggleMore() {
         />
       </div>
     </header>
+
     <div class="flex flex-1 h-[calc(100vh-4rem)]">
       <aside
-        class="hidden md:flex flex-col w-72 bg-white border-r border-gray-200 py-8 px-4 gap-2 fixed top-16 left-0 h-[calc(100vh-4rem)] z-20 overflow-y-auto"
+        class="hidden md:flex flex-col w-72 bg-white border-r border-gray-200 py-8 px-4 gap-2 fixed top-16 left-0 h-[calc(100vh-4rem)] z-20 overflow-y-auto no-scrollbar"
       >
         <nav class="flex flex-col gap-2">
           <div class="mb-2">
@@ -174,7 +175,7 @@ function toggleMore() {
         </nav>
       </aside>
       <main
-        class="flex-1 p-6 flex flex-col gap-8 ml-0 md:ml-72 overflow-y-auto h-[calc(100vh-4rem)]"
+        class="flex-1 p-6 flex flex-col gap-8 ml-0 md:ml-72 overflow-y-auto h-[calc(100vh-4rem)] no-scrollbar"
       >
         <router-view />
       </main>

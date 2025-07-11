@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full max-w-3xl mx-auto">
+  <div class="w-full mx-auto">
     <h1 class="text-2xl font-bold text-gray-800 mb-4">Schedule / Calendar</h1>
     <div class="bg-white rounded-xl shadow p-6">
       <div class="grid grid-cols-7 gap-2 text-center text-gray-500 mb-2">

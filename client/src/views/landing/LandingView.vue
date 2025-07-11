@@ -113,7 +113,7 @@
           "
         />
       </div>
-      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+      <div class="mx-auto py-32 sm:py-48 lg:py-56">
         <div class="hidden sm:mb-8 sm:flex sm:justify-center">
           <div
             class="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
@@ -180,7 +180,7 @@
   <div class="overflow-hidden bg-gray-900 py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div
-        class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
+        class="mx-auto grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
       >
         <div class="lg:pt-4 lg:pr-8">
           <div class="lg:max-w-lg">
@@ -313,9 +313,7 @@
         Choose the right plan for you
       </p>
     </div>
-    <p
-      class="mx-auto mt-6 max-w-2xl text-center text-lg font-medium text-pretty text-gray-600 sm:text-xl/8"
-    >
+    <p class="mx-auto mt-6 text-center text-lg font-medium text-pretty text-gray-600 sm:text-xl/8">
       Choose an affordable plan that’s packed with the best features for engaging your audience,
       creating customer loyalty, and driving sales.
     </p>
@@ -555,7 +553,7 @@
     <div
       class="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl ring-1 shadow-indigo-600/10 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center"
     ></div>
-    <div class="mx-auto max-w-2xl lg:max-w-4xl">
+    <div class="mx-auto lg:max-w-4xl">
       <img
         class="mx-auto h-12"
         src="https://tailwindcss.com/plus-assets/img/logos/workcation-logo-indigo-600.svg"

@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full max-w-2xl mx-auto">
+  <div class="w-full mx-auto">
     <h1 class="text-2xl font-bold text-gray-800 mb-4">Assignments / Tasks</h1>
     <div class="bg-white rounded-xl shadow p-6 space-y-4">
       <div class="flex items-center gap-3">
