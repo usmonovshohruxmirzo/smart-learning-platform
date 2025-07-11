@@ -130,7 +130,9 @@
             The Smart Learning Platform
           </h1>
           <p class="mt-8 text-lg font-medium text-pretty text-gray-700 sm:text-xl/8">
-            Unlock your potential with AI-powered personalized courses, adaptive quizzes, and real-time progress tracking. Experience a modern, interactive, and community-driven way to learn and teach—built for students, instructors, and lifelong learners.
+            Unlock your potential with AI-powered personalized courses, adaptive quizzes, and
+            real-time progress tracking. Experience a modern, interactive, and community-driven way
+            to learn and teach—built for students, instructors, and lifelong learners.
           </p>
           <div class="mt-10 flex items-center justify-center gap-x-6">
             <router-link
@@ -174,27 +176,29 @@
       </div>
     </div>
   </div>
-  <div class="overflow-hidden bg-white py-24 sm:py-32 rounded-2xl shadow-lg mx-4 my-8">
+
+  <div class="overflow-hidden bg-gray-900 py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div
         class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
       >
         <div class="lg:pt-4 lg:pr-8">
           <div class="lg:max-w-lg">
-            <h2 class="text-base/7 font-semibold text-blue-600">Smarter, Adaptive Learning</h2>
+            <h2 class="text-base/7 font-semibold text-indigo-400">Deploy faster</h2>
             <p
-              class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl"
+              class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl"
             >
-              AI-Powered, Personalized Education
+              A better workflow
             </p>
-            <p class="mt-6 text-lg/8 text-gray-700">
-              Our platform uses advanced AI to tailor every course, quiz, and recommendation to your unique learning style. Track your progress, earn achievements, and join a vibrant community—all in one place.
+            <p class="mt-6 text-lg/8 text-gray-300">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis
+              suscipit eaque, iste dolor cupiditate blanditiis ratione.
             </p>
-            <dl class="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
+            <dl class="mt-10 max-w-xl space-y-8 text-base/7 text-gray-400 lg:max-w-none">
               <div class="relative pl-9">
-                <dt class="inline font-semibold text-gray-900">
+                <dt class="inline font-semibold text-white">
                   <svg
-                    class="absolute top-1 left-1 size-5 text-blue-600"
+                    class="absolute top-1 left-1 size-5 text-indigo-400"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                     aria-hidden="true"
@@ -206,16 +210,17 @@
                       clip-rule="evenodd"
                     />
                   </svg>
-                  Personalized Learning Paths
+                  Push to deploy.
                 </dt>
                 <dd class="inline">
-                  Get course and quiz recommendations tailored to your strengths, goals, and progress. Our AI adapts as you learn.
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit
+                  perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
                 </dd>
               </div>
               <div class="relative pl-9">
-                <dt class="inline font-semibold text-gray-900">
+                <dt class="inline font-semibold text-white">
                   <svg
-                    class="absolute top-1 left-1 size-5 text-blue-600"
+                    class="absolute top-1 left-1 size-5 text-indigo-400"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                     aria-hidden="true"
@@ -227,16 +232,17 @@
                       clip-rule="evenodd"
                     />
                   </svg>
-                  Adaptive Quizzes & Analytics
+                  SSL certificates.
                 </dt>
                 <dd class="inline">
-                  Challenge yourself with quizzes that adapt to your level. Instantly see your strengths, weaknesses, and progress with smart analytics.
+                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat
+                  commodo.
                 </dd>
               </div>
               <div class="relative pl-9">
-                <dt class="inline font-semibold text-gray-900">
+                <dt class="inline font-semibold text-white">
                   <svg
-                    class="absolute top-1 left-1 size-5 text-blue-600"
+                    class="absolute top-1 left-1 size-5 text-indigo-400"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                     aria-hidden="true"
@@ -251,152 +257,383 @@
                       clip-rule="evenodd"
                     />
                   </svg>
-                  Real-Time Progress Tracking
+                  Database backups.
                 </dt>
                 <dd class="inline">
-                  Visualize your learning journey, set goals, and celebrate achievements as you advance through courses and skills.
+                  Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi
+                  lobortis.
                 </dd>
               </div>
             </dl>
           </div>
         </div>
-
         <img
-          src="../../assets/dashboard.png"
+          src="https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png"
           alt="Product screenshot"
-          class="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0"
+          class="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-white/10 sm:w-228 md:-ml-4 lg:-ml-0"
           width="2432"
           height="1442"
         />
       </div>
     </div>
   </div>
-  <div class="bg-white py-24 sm:py-32">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="mx-auto max-w-2xl lg:text-center">
-        <h2 class="text-base/7 font-semibold text-blue-600">Why Smart Learning?</h2>
-        <p
-          class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl lg:text-balance"
+
+  <div class="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+    <div
+      class="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl"
+      aria-hidden="true"
+    >
+      <div
+        class="mx-auto aspect-1155/678 w-288.75 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
+        style="
+          clip-path: polygon(
+            74.1% 44.1%,
+            100% 61.6%,
+            97.5% 26.9%,
+            85.5% 0.1%,
+            80.7% 2%,
+            72.5% 32.5%,
+            60.2% 62.4%,
+            52.4% 68.1%,
+            47.5% 58.3%,
+            45.2% 34.5%,
+            27.5% 76.7%,
+            0.1% 64.9%,
+            17.9% 100%,
+            27.6% 76.8%,
+            76.1% 97.7%,
+            74.1% 44.1%
+          );
+        "
+      ></div>
+    </div>
+    <div class="mx-auto max-w-4xl text-center">
+      <h2 class="text-base/7 font-semibold text-indigo-600">Pricing</h2>
+      <p class="mt-2 text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-6xl">
+        Choose the right plan for you
+      </p>
+    </div>
+    <p
+      class="mx-auto mt-6 max-w-2xl text-center text-lg font-medium text-pretty text-gray-600 sm:text-xl/8"
+    >
+      Choose an affordable plan that’s packed with the best features for engaging your audience,
+      creating customer loyalty, and driving sales.
+    </p>
+    <div
+      class="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2"
+    >
+      <div
+        class="rounded-3xl rounded-t-3xl bg-white/60 p-8 ring-1 ring-gray-900/10 sm:mx-8 sm:rounded-b-none sm:p-10 lg:mx-0 lg:rounded-tr-none lg:rounded-bl-3xl"
+      >
+        <h3 id="tier-hobby" class="text-base/7 font-semibold text-indigo-600">Hobby</h3>
+        <p class="mt-4 flex items-baseline gap-x-2">
+          <span class="text-5xl font-semibold tracking-tight text-gray-900">$29</span>
+          <span class="text-base text-gray-500">/month</span>
+        </p>
+        <p class="mt-6 text-base/7 text-gray-600">
+          The perfect plan if you&#039;re just getting started with our product.
+        </p>
+        <ul role="list" class="mt-8 space-y-3 text-sm/6 text-gray-600 sm:mt-10">
+          <li class="flex gap-x-3">
+            <svg
+              class="h-6 w-5 flex-none text-indigo-600"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+              data-slot="icon"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            25 products
+          </li>
+          <li class="flex gap-x-3">
+            <svg
+              class="h-6 w-5 flex-none text-indigo-600"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+              data-slot="icon"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            Up to 10,000 subscribers
+          </li>
+          <li class="flex gap-x-3">
+            <svg
+              class="h-6 w-5 flex-none text-indigo-600"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+              data-slot="icon"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            Advanced analytics
+          </li>
+          <li class="flex gap-x-3">
+            <svg
+              class="h-6 w-5 flex-none text-indigo-600"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+              data-slot="icon"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            24-hour support response time
+          </li>
+        </ul>
+        <a
+          href="#"
+          aria-describedby="tier-hobby"
+          class="mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-indigo-600 ring-1 ring-indigo-200 ring-inset hover:ring-indigo-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:mt-10"
+          >Get started today</a
         >
-          Everything you need for modern, effective learning
-        </p>
-        <p class="mt-6 text-lg/8 text-gray-700">
-          From interactive lessons and adaptive assignments to a supportive community and instructor tools, our platform empowers every learner and educator to succeed in the digital age.
-        </p>
       </div>
-      <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-        <dl
-          class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16"
+      <div class="relative rounded-3xl bg-gray-900 p-8 shadow-2xl ring-1 ring-gray-900/10 sm:p-10">
+        <h3 id="tier-enterprise" class="text-base/7 font-semibold text-indigo-400">Enterprise</h3>
+        <p class="mt-4 flex items-baseline gap-x-2">
+          <span class="text-5xl font-semibold tracking-tight text-white">$99</span>
+          <span class="text-base text-gray-400">/month</span>
+        </p>
+        <p class="mt-6 text-base/7 text-gray-300">
+          Dedicated support and infrastructure for your company.
+        </p>
+        <ul role="list" class="mt-8 space-y-3 text-sm/6 text-gray-300 sm:mt-10">
+          <li class="flex gap-x-3">
+            <svg
+              class="h-6 w-5 flex-none text-indigo-400"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+              data-slot="icon"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            Unlimited products
+          </li>
+          <li class="flex gap-x-3">
+            <svg
+              class="h-6 w-5 flex-none text-indigo-400"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+              data-slot="icon"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            Unlimited subscribers
+          </li>
+          <li class="flex gap-x-3">
+            <svg
+              class="h-6 w-5 flex-none text-indigo-400"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+              data-slot="icon"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            Advanced analytics
+          </li>
+          <li class="flex gap-x-3">
+            <svg
+              class="h-6 w-5 flex-none text-indigo-400"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+              data-slot="icon"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            Dedicated support representative
+          </li>
+          <li class="flex gap-x-3">
+            <svg
+              class="h-6 w-5 flex-none text-indigo-400"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+              data-slot="icon"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            Marketing automations
+          </li>
+          <li class="flex gap-x-3">
+            <svg
+              class="h-6 w-5 flex-none text-indigo-400"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+              data-slot="icon"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            Custom integrations
+          </li>
+        </ul>
+        <a
+          href="#"
+          aria-describedby="tier-enterprise"
+          class="mt-8 block rounded-md bg-indigo-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 sm:mt-10"
+          >Get started today</a
         >
-          <div class="relative pl-16">
-            <dt class="text-base/7 font-semibold text-gray-900">
-              <div
-                class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-blue-600"
-              >
-                <svg
-                  class="size-6 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                  data-slot="icon"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M12 16.5V9.75m0 0 3 3m-3-3-3 3M6.75 19.5a4.5 4.5 0 0 1-1.41-8.775 5.25 5.25 0 0 1 10.233-2.33 3 3 0 0 1 3.758 3.848A3.752 3.752 0 0 1 18 19.5H6.75Z"
-                  />
-                </svg>
-              </div>
-              Community & Collaboration
-            </dt>
-            <dd class="mt-2 text-base/7 text-gray-600">
-              Connect with peers, join discussions, and collaborate on projects. Our platform fosters a vibrant, supportive learning community.
-            </dd>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-gray-900 py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+        <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+          <dt class="text-base/7 text-gray-400">Transactions every 24 hours</dt>
+          <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">
+            44 million
+          </dd>
+        </div>
+        <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+          <dt class="text-base/7 text-gray-400">Assets under holding</dt>
+          <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">
+            $119 trillion
+          </dd>
+        </div>
+        <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+          <dt class="text-base/7 text-gray-400">New users annually</dt>
+          <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">
+            46,000
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+
+  <section class="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8">
+    <div
+      class="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,var(--color-indigo-100),white)] opacity-20"
+    ></div>
+    <div
+      class="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl ring-1 shadow-indigo-600/10 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center"
+    ></div>
+    <div class="mx-auto max-w-2xl lg:max-w-4xl">
+      <img
+        class="mx-auto h-12"
+        src="https://tailwindcss.com/plus-assets/img/logos/workcation-logo-indigo-600.svg"
+        alt=""
+      />
+
+      <figure class="mt-10">
+        <blockquote class="text-center text-xl/8 font-semibold text-gray-900 sm:text-2xl/9">
+          <p>
+            “Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa
+            sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”
+          </p>
+        </blockquote>
+        <figcaption class="mt-10">
+          <img
+            class="mx-auto size-10 rounded-full"
+            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+            alt=""
+          />
+          <div class="mt-4 flex items-center justify-center space-x-3 text-base">
+            <div class="font-semibold text-gray-900">Judith Black</div>
+            <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900">
+              <circle cx="1" cy="1" r="1" />
+            </svg>
+            <div class="text-gray-600">CEO of Workcation</div>
           </div>
-          <div class="relative pl-16">
-            <dt class="text-base/7 font-semibold text-gray-900">
-              <div
-                class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-blue-600"
-              >
-                <svg
-                  class="size-6 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                  data-slot="icon"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
-                  />
-                </svg>
-              </div>
-              Instructor & Admin Tools
-            </dt>
-            <dd class="mt-2 text-base/7 text-gray-600">
-              Manage courses, track student progress, and access powerful analytics and communication tools—all in one dashboard.
-            </dd>
-          </div>
-          <div class="relative pl-16">
-            <dt class="text-base/7 font-semibold text-gray-900">
-              <div
-                class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-blue-600"
-              >
-                <svg
-                  class="size-6 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                  data-slot="icon"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
-                  />
-                </svg>
-              </div>
-              Secure & Scalable
-            </dt>
-            <dd class="mt-2 text-base/7 text-gray-600">
-              Your data and learning experience are protected by modern, secure, and scalable technology—so you can focus on growth.
-            </dd>
-          </div>
-          <div class="relative pl-16">
-            <dt class="text-base/7 font-semibold text-gray-900">
-              <div
-                class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-blue-600"
-              >
-                <svg
-                  class="size-6 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                  data-slot="icon"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M7.864 4.243A7.5 7.5 0 0 1 19.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 0 0 4.5 10.5a7.464 7.464 0 0 1-1.15 3.993m1.989 3.559A11.209 11.209 0 0 0 8.25 10.5a3.75 3.75 0 1 1 7.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 0 1-3.6 9.75m6.633-4.596a18.666 18.666 0 0 1-2.485 5.33"
-                  />
-                </svg>
-              </div>
-              Achievements & Motivation
-            </dt>
-            <dd class="mt-2 text-base/7 text-gray-600">
-              Earn badges, certificates, and rewards as you learn. Stay motivated and celebrate your progress every step of the way.
-            </dd>
-          </div>
-        </dl>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="bg-gray-900 py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <h2 class="text-center text-lg/8 font-semibold text-white">
+        Trusted by the world’s most innovative teams
+      </h2>
+      <div
+        class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5"
+      >
+        <img
+          class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+          src="https://tailwindcss.com/plus-assets/img/logos/158x48/transistor-logo-white.svg"
+          alt="Transistor"
+          width="158"
+          height="48"
+        />
+
+        <img
+          class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+          src="https://tailwindcss.com/plus-assets/img/logos/158x48/reform-logo-white.svg"
+          alt="Reform"
+          width="158"
+          height="48"
+        />
+
+        <img
+          class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+          src="https://tailwindcss.com/plus-assets/img/logos/158x48/tuple-logo-white.svg"
+          alt="Tuple"
+          width="158"
+          height="48"
+        />
+
+        <img
+          class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
+          src="https://tailwindcss.com/plus-assets/img/logos/158x48/savvycal-logo-white.svg"
+          alt="SavvyCal"
+          width="158"
+          height="48"
+        />
+
+        <img
+          class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
+          src="https://tailwindcss.com/plus-assets/img/logos/158x48/statamic-logo-white.svg"
+          alt="Statamic"
+          width="158"
+          height="48"
+        />
       </div>
     </div>
   </div>
