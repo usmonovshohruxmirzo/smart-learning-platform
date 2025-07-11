@@ -89,7 +89,7 @@ function toggleMore() { showMore.value = !showMore.value }
         <router-view />
       </main>
     </div>
-    <!-- Bottom Navbar for Mobile: 5 Main Links + More Dropdown -->
+
     <nav class="fixed bottom-0 left-0 right-0 z-30 bg-white border-t border-gray-200 flex items-center h-20 md:hidden shadow-xl" role="navigation" aria-label="Main mobile navigation">
       <router-link to="/dashboard/overview" class="flex flex-col items-center justify-center flex-1 h-full text-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500" active-class="text-blue-700" aria-label="Overview">
         <font-awesome-icon :icon="['fas', 'book-open']" class="text-2xl mb-1" aria-hidden="true" />
@@ -107,12 +107,12 @@ function toggleMore() { showMore.value = !showMore.value }
         <font-awesome-icon :icon="['fas', 'users']" class="text-2xl mb-1" aria-hidden="true" />
         <span class="text-xs font-semibold">Profile</span>
       </router-link>
-      <!-- More Button -->
+
       <button @click="toggleMore" class="flex flex-col items-center justify-center flex-1 h-full text-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 relative" aria-label="More">
         <font-awesome-icon :icon="['fas', 'users']" class="text-2xl mb-1" aria-hidden="true" />
         <span class="text-xs font-semibold">More</span>
       </button>
-      <!-- Dropdown Menu (Short, Scrollable, Connected to Bottom Nav) -->
+
       <div v-if="showMore" class="fixed left-0 right-0 bottom-20 z-50 flex justify-center md:hidden pointer-events-none">
         <div class="bg-white rounded-xl shadow-2xl w-full max-w-sm mx-auto p-2 flex flex-col gap-1 max-h-60 overflow-y-auto border pointer-events-auto">
           <router-link to="/dashboard/schedule" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-100 text-gray-700" @click="toggleMore">
