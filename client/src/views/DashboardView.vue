@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-const showMore = ref(false)
-function toggleMore() {
+const showMore = ref<boolean>(false)
+function toggleMore(): void {
   showMore.value = !showMore.value
 }
 </script>
@@ -175,7 +175,7 @@ function toggleMore() {
         </nav>
       </aside>
       <main
-        class="flex-1 p-6 flex flex-col gap-8 ml-0 md:ml-72 overflow-y-auto h-[calc(100vh-4rem)] no-scrollbar"
+        class="flex-1 p-6 flex flex-col gap-8 ml-0 md:ml-72 overflow-y-auto h-[calc(100vh-4rem)] no-scrollbar pb-[120px]"
       >
         <router-view />
       </main>
@@ -237,7 +237,7 @@ function toggleMore() {
         class="fixed left-0 right-0 bottom-20 z-50 flex justify-center md:hidden pointer-events-none"
       >
         <div
-          class="bg-white rounded-xl shadow-2xl w-full max-w-sm mx-auto p-2 flex flex-col gap-1 max-h-60 overflow-y-auto border pointer-events-auto"
+          class="bg-white w-screen p-2 flex flex-col gap-1 max-h-60 overflow-y-auto border pointer-events-auto no-scrollbar"
         >
           <router-link
             to="/dashboard/schedule"
