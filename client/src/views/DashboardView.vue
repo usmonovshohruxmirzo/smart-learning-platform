@@ -227,7 +227,7 @@ function toggleMore() {
         class="flex flex-col items-center justify-center flex-1 h-full text-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 relative"
         aria-label="More"
       >
-        <font-awesome-icon :icon="['fas', 'users']" class="text-2xl mb-1" aria-hidden="true" />
+        <font-awesome-icon :icon="['fas', 'list-ul']" class="text-2xl mb-1" />
         <span class="text-xs font-semibold">More</span>
       </button>
 
