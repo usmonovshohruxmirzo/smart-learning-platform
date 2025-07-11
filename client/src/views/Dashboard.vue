@@ -1,7 +1,11 @@
+<script setup>
+import { ref } from 'vue'
+const showMore = ref(false)
+function toggleMore() { showMore.value = !showMore.value }
+</script>
 <template>
   <div class="min-h-screen bg-gray-100 flex flex-col">
-    <!-- App Bar -->
-    <header class="w-full bg-white shadow-md flex items-center justify-between px-6 h-16">
+    <header class="w-full bg-white shadow-md flex items-center justify-between px-6 h-16 z-10">
       <div class="text-xl font-bold text-blue-600 tracking-tight">Smart Learning</div>
       <div class="flex items-center gap-4">
         <button class="rounded-full bg-blue-50 p-2 hover:bg-blue-100">
@@ -10,40 +14,148 @@
         <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full border-2 border-blue-500" alt="User" />
       </div>
     </header>
-    <div class="flex flex-1">
-      <!-- Sidebar (desktop only) -->
-      <aside class="hidden md:flex flex-col w-56 bg-white border-r border-gray-200 py-8 px-4 gap-2">
+    <div class="flex flex-1 h-[calc(100vh-4rem)]">
+      <aside class="hidden md:flex flex-col w-60 bg-white border-r border-gray-200 py-8 px-4 gap-2 fixed top-16 left-0 h-[calc(100vh-4rem)] z-20 overflow-y-auto">
         <nav class="flex flex-col gap-2">
-          <router-link to="/dashboard/overview" class="flex items-center gap-2 px-3 py-2 rounded-lg text-blue-600 bg-blue-50 font-semibold" active-class="bg-blue-100 text-blue-700">
-            <font-awesome-icon :icon="['fas', 'book-open']" class="text-lg" /> Overview
-          </router-link>
-          <router-link to="/dashboard/courses" class="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100" active-class="bg-blue-100 text-blue-700">
-            <font-awesome-icon :icon="['fas', 'book-open']" class="text-lg" /> My Courses
-          </router-link>
-          <router-link to="/dashboard/certificates" class="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100" active-class="bg-blue-100 text-blue-700">
-            <font-awesome-icon :icon="['fas', 'certificate']" class="text-lg" /> Certificates
-          </router-link>
-          <router-link to="/dashboard/profile" class="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100" active-class="bg-blue-100 text-blue-700">
-            <font-awesome-icon :icon="['fas', 'users']" class="text-lg" /> Profile
-          </router-link>
-          <router-link to="/dashboard/reviews" class="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100" active-class="bg-blue-100 text-blue-700">
-            <font-awesome-icon :icon="['fas', 'star']" class="text-lg" /> Reviews
-          </router-link>
-          <router-link to="/dashboard/payment" class="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100" active-class="bg-blue-100 text-blue-700">
-            <font-awesome-icon :icon="['fas', 'dollar-sign']" class="text-lg" /> Payment
-          </router-link>
-          <router-link to="/dashboard/instructor" class="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100" active-class="bg-blue-100 text-blue-700">
-            <font-awesome-icon :icon="['fas', 'users']" class="text-lg" /> Instructor
-          </router-link>
-          <router-link to="/dashboard/course-edit" class="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100" active-class="bg-blue-100 text-blue-700">
-            <font-awesome-icon :icon="['fas', 'book-open']" class="text-lg" /> Course Edit
-          </router-link>
+          <div class="mb-2">
+            <div class="text-xs font-bold text-gray-400 uppercase mb-1">Main</div>
+            <router-link to="/dashboard/overview" class="flex items-center gap-2 px-3 py-2 rounded-lg text-blue-600 bg-blue-50 font-semibold" active-class="bg-blue-100 text-blue-700">
+              <font-awesome-icon :icon="['fas', 'book-open']" class="text-lg" /> Overview
+            </router-link>
+            <router-link to="/dashboard/courses" class="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100" active-class="bg-blue-100 text-blue-700">
+              <font-awesome-icon :icon="['fas', 'book-open']" class="text-lg" /> My Courses
+            </router-link>
+            <router-link to="/dashboard/assignments" class="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100" active-class="bg-blue-100 text-blue-700">
+              <font-awesome-icon :icon="['fas', 'tasks']" class="text-lg" /> Assignments
+            </router-link>
+            <router-link to="/dashboard/schedule" class="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100" active-class="bg-blue-100 text-blue-700">
+              <font-awesome-icon :icon="['fas', 'calendar']" class="text-lg" /> Schedule
+            </router-link>
+          </div>
+
+          <div class="mb-2">
+            <div class="text-xs font-bold text-gray-400 uppercase mb-1">Learning</div>
+            <router-link to="/dashboard/wishlist" class="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100" active-class="bg-blue-100 text-blue-700">
+              <font-awesome-icon :icon="['fas', 'heart']" class="text-lg" /> Wishlist
+            </router-link>
+            <router-link to="/dashboard/community" class="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100" active-class="bg-blue-100 text-blue-700">
+              <font-awesome-icon :icon="['fas', 'comments']" class="text-lg" /> Community
+            </router-link>
+            <router-link to="/dashboard/achievements" class="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100" active-class="bg-blue-100 text-blue-700">
+              <font-awesome-icon :icon="['fas', 'trophy']" class="text-lg" /> Achievements
+            </router-link>
+            <router-link to="/dashboard/analytics" class="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100" active-class="bg-blue-100 text-blue-700">
+              <font-awesome-icon :icon="['fas', 'chart-bar']" class="text-lg" /> Analytics
+            </router-link>
+          </div>
+
+          <div class="mb-2">
+            <div class="text-xs font-bold text-gray-400 uppercase mb-1">Account</div>
+            <router-link to="/dashboard/profile" class="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100" active-class="bg-blue-100 text-blue-700">
+              <font-awesome-icon :icon="['fas', 'users']" class="text-lg" /> Profile
+            </router-link>
+            <router-link to="/dashboard/certificates" class="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100" active-class="bg-blue-100 text-blue-700">
+              <font-awesome-icon :icon="['fas', 'certificate']" class="text-lg" /> Certificates
+            </router-link>
+            <router-link to="/dashboard/reviews" class="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100" active-class="bg-blue-100 text-blue-700">
+              <font-awesome-icon :icon="['fas', 'star']" class="text-lg" /> Reviews
+            </router-link>
+            <router-link to="/dashboard/subscription" class="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100" active-class="bg-blue-100 text-blue-700">
+              <font-awesome-icon :icon="['fas', 'credit-card']" class="text-lg" /> Subscription
+            </router-link>
+            <router-link to="/dashboard/payment" class="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100" active-class="bg-blue-100 text-blue-700">
+              <font-awesome-icon :icon="['fas', 'dollar-sign']" class="text-lg" /> Payment
+            </router-link>
+          </div>
+
+          <div>
+            <div class="text-xs font-bold text-gray-400 uppercase mb-1">Admin</div>
+            <router-link to="/dashboard/instructor" class="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100" active-class="bg-blue-100 text-blue-700">
+              <font-awesome-icon :icon="['fas', 'users']" class="text-lg" /> Instructor
+            </router-link>
+            <router-link to="/dashboard/admin" class="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100" active-class="bg-blue-100 text-blue-700">
+              <font-awesome-icon :icon="['fas', 'user-shield']" class="text-lg" /> Admin Panel
+            </router-link>
+            <router-link to="/dashboard/course-edit" class="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100" active-class="bg-blue-100 text-blue-700">
+              <font-awesome-icon :icon="['fas', 'book-open']" class="text-lg" /> Course Edit
+            </router-link>
+            <router-link to="/dashboard/messages" class="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100" active-class="bg-blue-100 text-blue-700">
+              <font-awesome-icon :icon="['fas', 'envelope']" class="text-lg" /> Messages
+            </router-link>
+          </div>
         </nav>
       </aside>
-      <!-- Main Content -->
-      <main class="flex-1 p-6 flex flex-col gap-8">
+      <main class="flex-1 p-6 flex flex-col gap-8 ml-0 md:ml-60 overflow-y-auto h-[calc(100vh-4rem)]">
         <router-view />
       </main>
     </div>
+    <!-- Bottom Navbar for Mobile: 5 Main Links + More Dropdown -->
+    <nav class="fixed bottom-0 left-0 right-0 z-30 bg-white border-t border-gray-200 flex items-center h-20 md:hidden shadow-xl" role="navigation" aria-label="Main mobile navigation">
+      <router-link to="/dashboard/overview" class="flex flex-col items-center justify-center flex-1 h-full text-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500" active-class="text-blue-700" aria-label="Overview">
+        <font-awesome-icon :icon="['fas', 'book-open']" class="text-2xl mb-1" aria-hidden="true" />
+        <span class="text-xs font-semibold">Overview</span>
+      </router-link>
+      <router-link to="/dashboard/courses" class="flex flex-col items-center justify-center flex-1 h-full text-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500" active-class="text-blue-700" aria-label="Courses">
+        <font-awesome-icon :icon="['fas', 'book-open']" class="text-2xl mb-1" aria-hidden="true" />
+        <span class="text-xs font-semibold">Courses</span>
+      </router-link>
+      <router-link to="/dashboard/assignments" class="flex flex-col items-center justify-center flex-1 h-full text-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500" active-class="text-blue-700" aria-label="Assignments">
+        <font-awesome-icon :icon="['fas', 'tasks']" class="text-2xl mb-1" aria-hidden="true" />
+        <span class="text-xs font-semibold">Tasks</span>
+      </router-link>
+      <router-link to="/dashboard/profile" class="flex flex-col items-center justify-center flex-1 h-full text-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500" active-class="text-blue-700" aria-label="Profile">
+        <font-awesome-icon :icon="['fas', 'users']" class="text-2xl mb-1" aria-hidden="true" />
+        <span class="text-xs font-semibold">Profile</span>
+      </router-link>
+      <!-- More Button -->
+      <button @click="toggleMore" class="flex flex-col items-center justify-center flex-1 h-full text-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 relative" aria-label="More">
+        <font-awesome-icon :icon="['fas', 'users']" class="text-2xl mb-1" aria-hidden="true" />
+        <span class="text-xs font-semibold">More</span>
+      </button>
+      <!-- Dropdown Menu (Short, Scrollable, Connected to Bottom Nav) -->
+      <div v-if="showMore" class="fixed left-0 right-0 bottom-20 z-50 flex justify-center md:hidden pointer-events-none">
+        <div class="bg-white rounded-xl shadow-2xl w-full max-w-sm mx-auto p-2 flex flex-col gap-1 max-h-60 overflow-y-auto border pointer-events-auto">
+          <router-link to="/dashboard/schedule" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-100 text-gray-700" @click="toggleMore">
+            <font-awesome-icon :icon="['fas', 'calendar']" class="text-lg" aria-hidden="true" /> Schedule
+          </router-link>
+          <router-link to="/dashboard/wishlist" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-100 text-gray-700" @click="toggleMore">
+            <font-awesome-icon :icon="['fas', 'heart']" class="text-lg" aria-hidden="true" /> Wishlist
+          </router-link>
+          <router-link to="/dashboard/community" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-100 text-gray-700" @click="toggleMore">
+            <font-awesome-icon :icon="['fas', 'comments']" class="text-lg" aria-hidden="true" /> Community
+          </router-link>
+          <router-link to="/dashboard/achievements" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-100 text-gray-700" @click="toggleMore">
+            <font-awesome-icon :icon="['fas', 'trophy']" class="text-lg" aria-hidden="true" /> Achievements
+          </router-link>
+          <router-link to="/dashboard/analytics" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-100 text-gray-700" @click="toggleMore">
+            <font-awesome-icon :icon="['fas', 'chart-bar']" class="text-lg" aria-hidden="true" /> Analytics
+          </router-link>
+          <router-link to="/dashboard/certificates" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-100 text-gray-700" @click="toggleMore">
+            <font-awesome-icon :icon="['fas', 'certificate']" class="text-lg" aria-hidden="true" /> Certificates
+          </router-link>
+          <router-link to="/dashboard/reviews" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-100 text-gray-700" @click="toggleMore">
+            <font-awesome-icon :icon="['fas', 'star']" class="text-lg" aria-hidden="true" /> Reviews
+          </router-link>
+          <router-link to="/dashboard/subscription" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-100 text-gray-700" @click="toggleMore">
+            <font-awesome-icon :icon="['fas', 'credit-card']" class="text-lg" aria-hidden="true" /> Subscription
+          </router-link>
+          <router-link to="/dashboard/payment" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-100 text-gray-700" @click="toggleMore">
+            <font-awesome-icon :icon="['fas', 'dollar-sign']" class="text-lg" aria-hidden="true" /> Payment
+          </router-link>
+          <router-link to="/dashboard/instructor" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-100 text-gray-700" @click="toggleMore">
+            <font-awesome-icon :icon="['fas', 'users']" class="text-lg" aria-hidden="true" /> Instructor
+          </router-link>
+          <router-link to="/dashboard/admin" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-100 text-gray-700" @click="toggleMore">
+            <font-awesome-icon :icon="['fas', 'user-shield']" class="text-lg" aria-hidden="true" /> Admin Panel
+          </router-link>
+          <router-link to="/dashboard/course-edit" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-100 text-gray-700" @click="toggleMore">
+            <font-awesome-icon :icon="['fas', 'book-open']" class="text-lg" aria-hidden="true" /> Course Edit
+          </router-link>
+          <router-link to="/dashboard/messages" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-100 text-gray-700" @click="toggleMore">
+            <font-awesome-icon :icon="['fas', 'envelope']" class="text-lg" aria-hidden="true" /> Messages
+          </router-link>
+        </div>
+      </div>
+    </nav>
   </div>
 </template> 

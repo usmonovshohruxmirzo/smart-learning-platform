@@ -1,10 +1,10 @@
 import './assets/main.css'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faBookOpen, faCertificate, faStar, faDollarSign, faUsers } from '@fortawesome/free-solid-svg-icons'
+import { faBookOpen, faCertificate, faStar, faDollarSign, faUsers, faCalendar, faEnvelope, faUserShield, faTasks, faCreditCard, faHeart, faComments, faTrophy, faChartBar } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faBookOpen, faCertificate, faStar, faDollarSign, faUsers)
+library.add(faBookOpen, faCertificate, faStar, faDollarSign, faUsers, faCalendar, faEnvelope, faUserShield, faTasks, faCreditCard, faHeart, faComments, faTrophy, faChartBar)
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
