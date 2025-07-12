@@ -39,14 +39,14 @@ library.add(
 )
 
 import { createApp } from 'vue'
-import { createPinia } from 'pinia'
 
 import App from './App.vue'
 import router from './router'
+import pinia from './stores'
 
 const app = createApp(App)
 app.component('font-awesome-icon', FontAwesomeIcon)
-app.use(createPinia())
+app.use(pinia)
 app.use(router)
 
 app.mount('#app')

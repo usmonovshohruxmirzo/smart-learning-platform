@@ -1,10 +1,11 @@
-import axios, { Axios, AxiosError, type AxiosResponse } from 'axios'
+import axios, { AxiosError, type AxiosInstance, type AxiosResponse } from 'axios'
 
-const api: Axios = axios.create({
-  baseURL: 'http://localhost:5173',
+const api: AxiosInstance = axios.create({
+  baseURL: 'http://127.0.0.1:8000/',
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
+    Accept: 'application/json',
   },
 })
 
