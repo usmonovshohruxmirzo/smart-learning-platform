@@ -7,7 +7,7 @@ function toggleMore(): void {
 </script>
 <template>
   <div class="min-h-screen bg-gray-100 flex flex-col">
-    <header class="w-full bg-white flex items-center justify-between px-6 h-16 z-10">
+    <header class="w-full bg-white flex items-center justify-between px-6 h-16 z-10 bg-white border-b border-gray-200">
       <div class="text-xl font-bold text-blue-600 tracking-tight">Smart Learning</div>
       <div class="flex items-center gap-4">
         <button class="rounded-full bg-blue-50 p-2 hover:bg-blue-100">
