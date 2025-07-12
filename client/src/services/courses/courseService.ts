@@ -1,5 +1,6 @@
 import type { AxiosInstance, AxiosResponse } from 'axios'
 import type { Course, CourseCreateRequest, CourseUpdateRequest } from './types/courseService.type'
+import axios from 'axios'
 
 const API_BASE = '/api/courses/?format=json'
 
@@ -63,10 +64,11 @@ class CourseService {
 
   private handleError(error: unknown, message: string): Error {
     if (error instanceof Error && 'response' in error) {
-      const axiosError = error as any
-      return new Error(
-        `${message}: ${axiosError.response?.status} - ${axiosError.response?.data?.message || error.message}`,
-      )
+      if (axios.isAxiosError(error)) {
+        return new Error(
+          `${message}: ${error.response?.status} - ${error.response?.data?.message || error.message}`,
+        )
+      }
     }
     return new Error(`${message}: ${error instanceof Error ? error.message : 'Unknown error'}`)
   }

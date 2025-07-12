@@ -197,7 +197,10 @@
             <dl class="mt-10 max-w-xl space-y-8 text-base/7 text-gray-400 lg:max-w-none">
               <div class="relative pl-9">
                 <dt class="inline font-semibold text-white">
-                  <font-awesome-icon :icon="['fas', 'cloud-upload-alt']" class="absolute top-1 left-1 size-5 text-indigo-400" />
+                  <font-awesome-icon
+                    :icon="['fas', 'cloud-upload-alt']"
+                    class="absolute top-1 left-1 size-5 text-indigo-400"
+                  />
                   Push to deploy.
                 </dt>
                 <dd class="inline">
@@ -207,7 +210,10 @@
               </div>
               <div class="relative pl-9">
                 <dt class="inline font-semibold text-white">
-                  <font-awesome-icon :icon="['fas', 'lock']" class="absolute top-1 left-1 size-5 text-indigo-400" />
+                  <font-awesome-icon
+                    :icon="['fas', 'lock']"
+                    class="absolute top-1 left-1 size-5 text-indigo-400"
+                  />
                   SSL certificates.
                 </dt>
                 <dd class="inline">
@@ -217,7 +223,10 @@
               </div>
               <div class="relative pl-9">
                 <dt class="inline font-semibold text-white">
-                  <font-awesome-icon :icon="['fas', 'database']" class="absolute top-1 left-1 size-5 text-indigo-400" />
+                  <font-awesome-icon
+                    :icon="['fas', 'database']"
+                    class="absolute top-1 left-1 size-5 text-indigo-400"
+                  />
                   Database backups.
                 </dt>
                 <dd class="inline">
@@ -478,7 +487,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
 import { Dialog, DialogPanel } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'

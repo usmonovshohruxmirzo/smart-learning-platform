@@ -10,4 +10,4 @@ export interface CourseCreateRequest {
   description?: string
 }
 
-export interface CourseUpdateRequest extends Partial<CourseCreateRequest> {}
+export type CourseUpdateRequest = Partial<CourseCreateRequest>

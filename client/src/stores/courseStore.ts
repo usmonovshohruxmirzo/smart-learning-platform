@@ -25,8 +25,10 @@ export const useCourseStore = defineStore(
       error.value = null
       try {
         courses.value = await courseService.getCourses(params)
-      } catch (err: any) {
-        error.value = err.message || 'Failed to fetch courses'
+      } catch (err) {
+        if (err instanceof Error) {
+          error.value = err.message || 'Failed to fetch courses'
+        }
       } finally {
         loading.value = false
       }
@@ -37,8 +39,10 @@ export const useCourseStore = defineStore(
       error.value = null
       try {
         selectedCourse.value = await courseService.getCourse(id)
-      } catch (err: any) {
-        error.value = err.message || `Failed to fetch course ${id}`
+      } catch (err) {
+        if (err instanceof Error) {
+          error.value = err.message || `Failed to fetch course ${id}`
+        }
       } finally {
         loading.value = false
       }
@@ -50,8 +54,10 @@ export const useCourseStore = defineStore(
       try {
         const newCourse = await courseService.createCourse(data)
         courses.value.push(newCourse)
-      } catch (err: any) {
-        error.value = err.message || 'Failed to create course'
+      } catch (err) {
+        if (err instanceof Error) {
+          error.value = err.message || 'Failed to create course'
+        }
       } finally {
         loading.value = false
       }
@@ -69,8 +75,10 @@ export const useCourseStore = defineStore(
         if (selectedCourse.value?.id === id) {
           selectedCourse.value = updated
         }
-      } catch (err: any) {
-        error.value = err.message || `Failed to update course ${id}`
+      } catch (err) {
+        if (err instanceof Error) {
+          error.value = err.message || `Failed to update course ${id}`
+        }
       } finally {
         loading.value = false
       }
@@ -85,8 +93,10 @@ export const useCourseStore = defineStore(
         if (selectedCourse.value?.id === id) {
           selectedCourse.value = null
         }
-      } catch (err: any) {
-        error.value = err.message || `Failed to delete course ${id}`
+      } catch (err) {
+        if (err instanceof Error) {
+          error.value = err.message || `Failed to delete course ${id}`
+        }
       } finally {
         loading.value = false
       }
