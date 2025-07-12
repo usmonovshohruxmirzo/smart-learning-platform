@@ -146,6 +146,13 @@ function toggleMore(): void {
           <div>
             <div class="text-xs font-bold text-gray-400 uppercase mb-1">Admin</div>
             <router-link
+              to="/dashboard/students"
+              class="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100"
+              active-class="bg-blue-100 text-blue-700"
+            >
+              <font-awesome-icon :icon="['fas', 'graduation-cap']" class="text-lg" /> Students
+            </router-link>
+            <router-link
               to="/dashboard/instructor"
               class="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100"
               active-class="bg-blue-100 text-blue-700"
@@ -335,6 +342,14 @@ function toggleMore(): void {
           >
             <font-awesome-icon :icon="['fas', 'book-open']" class="text-lg" aria-hidden="true" />
             Course Edit
+          </router-link>
+          <router-link
+            to="/dashboard/students"
+            class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-100 text-gray-700"
+            @click="toggleMore"
+          >
+            <font-awesome-icon :icon="['fas', 'graduation-cap']" class="text-lg" aria-hidden="true" />
+            Students
           </router-link>
           <router-link
             to="/dashboard/messages"

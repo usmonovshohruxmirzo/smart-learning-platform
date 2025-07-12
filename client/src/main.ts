@@ -17,6 +17,7 @@ import {
   faTrophy,
   faChartBar,
   faListUl,
+  faGraduationCap,
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
@@ -36,6 +37,7 @@ library.add(
   faTrophy,
   faChartBar,
   faListUl,
+  faGraduationCap,
 )
 
 import { createApp } from 'vue'
