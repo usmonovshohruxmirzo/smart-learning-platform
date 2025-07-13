@@ -2,7 +2,7 @@ import type { AxiosInstance, AxiosResponse } from 'axios'
 import type { Course, CourseCreateRequest, CourseUpdateRequest } from './types/courseService.type'
 import axios from 'axios'
 
-const API_BASE = '/api/courses/?format=json'
+const API_BASE = '/api/courses/'
 
 interface HttpClient {
   get<T>(url: string, config?: unknown): Promise<AxiosResponse<T>>
