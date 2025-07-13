@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'apps.students',
     'apps.reviews',
     'apps.accounts',
+    'apps.notifications',
 ]
 
 AUTH_USER_MODEL = 'accounts.StudentModel'
