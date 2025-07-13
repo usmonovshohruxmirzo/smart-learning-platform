@@ -32,9 +32,13 @@
           >
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm/6 font-semibold text-blue-600 hover:text-blue-700"
-            >Log in <span aria-hidden="true">&rarr;</span></a
+          <router-link
+            to="/login"
+            class="text-sm/6 font-semibold text-blue-600 hover:text-blue-700"
           >
+            Log in
+            <span aria-hidden="true">&rarr;</span>
+          </router-link>
         </div>
       </nav>
       <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
