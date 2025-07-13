@@ -191,13 +191,13 @@ function toggleMore(): void {
     </div>
 
     <nav
-      class="fixed bottom-0 left-0 right-0 z-30 bg-white border-t border-gray-200 flex items-center h-20 md:hidden shadow-xl"
+      class="fixed bottom-0 left-0 right-0 z-30 bg-white border-t border-gray-200 flex items-center h-20 md:hidden shadow-xl text-gray-700"
       role="navigation"
       aria-label="Main mobile navigation"
     >
       <router-link
         to="/dashboard/overview"
-        class="flex flex-col items-center justify-center flex-1 h-full text-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+        class="flex flex-col items-center justify-center flex-1 h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
         active-class="text-blue-700"
         aria-label="Overview"
       >
@@ -243,15 +243,16 @@ function toggleMore(): void {
 
       <div
         v-if="showMore"
-        class="fixed left-0 right-0 bottom-20 z-50 flex justify-center md:hidden pointer-events-none"
+        class="fixed left-0 right-0 bottom-20 z-50 flex justify-center md:hidden pointer-events-none p-5"
       >
         <div
-          class="bg-white w-screen p-2 flex flex-col gap-1 max-h-60 overflow-y-auto border pointer-events-auto no-scrollbar"
+          class="bg-white w-screen p-5 flex flex-col gap-1 max-h-60 overflow-y-auto border pointer-events-auto no-scrollbar rounded-[5]"
         >
           <router-link
             to="/dashboard/schedule"
             class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-100"
             @click="toggleMore"
+            active-class="bg-blue-100 text-blue-700"
           >
             <font-awesome-icon :icon="['fas', 'calendar']" class="text-lg" aria-hidden="true" />
             Schedule
