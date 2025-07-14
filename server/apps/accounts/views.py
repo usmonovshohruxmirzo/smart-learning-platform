@@ -38,7 +38,6 @@ class PasswordResetRequestView(generics.GenericAPIView):
                 recipient_list=[email],
                 fail_silently=False,
             )
-        # Always return success so attacker cannot check if email exists
         return Response({"message": "If user exists, reset link sent."}, status=status.HTTP_200_OK)
 
 
