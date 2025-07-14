@@ -1,27 +1,45 @@
 from rest_framework import serializers
-from .models import StudentModel
-from django.contrib.auth import authenticate
+from django.contrib.auth import get_user_model
+from .models import PasswordResetToken
+
+User = get_user_model()
 
 class RegisterSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True)
+    password2 = serializers.CharField(write_only=True)
 
     class Meta:
-        model = StudentModel
-        fields = ('email', 'full_name', 'password', 'bio', 'avatar', 'phone_number')
+        model = User
+        fields = ('email', 'first_name', 'last_name', 'password', 'password2')
+
+    def validate(self, attrs):
+        if attrs['password'] != attrs['password2']:
+            raise serializers.ValidationError("Passwords do not match")
+        return attrs
 
     def create(self, validated_data):
-        password = validated_data.pop('password')
-        user = StudentModel(**validated_data)
-        user.set_password(password)
-        user.save()
+        validated_data.pop('password2')
+        user = User.objects.create_user(**validated_data)
         return user
 
-class LoginSerializer(serializers.Serializer):
+class PasswordResetRequestSerializer(serializers.Serializer):
     email = serializers.EmailField()
-    password = serializers.CharField(write_only=True)
-    
-    def validate(self, data):
-        user = authenticate(email=data['email'], password=data['password'])
-        if user and user.is_active:
-            return user
-        raise serializers.ValidationError("Invalid email or password")
+
+class PasswordResetConfirmSerializer(serializers.Serializer):
+    token = serializers.UUIDField()
+    new_password = serializers.CharField()
+    new_password2 = serializers.CharField()
+
+    def validate(self, attrs):
+        if attrs['new_password'] != attrs['new_password2']:
+            raise serializers.ValidationError("Passwords do not match")
+        return attrs
+
+class UserProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = (
+            'id', 'email', 'first_name', 'last_name', 
+            'bio', 'avatar', 'phone_number', 'address'
+        )
+        read_only_fields = ('email',)

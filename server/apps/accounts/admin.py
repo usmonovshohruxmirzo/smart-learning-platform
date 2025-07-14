@@ -1,25 +1,33 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
-from .models import StudentModel
+from .models import CustomUser, PasswordResetToken
 
-@admin.register(StudentModel)
-class StudentModelAdmin(BaseUserAdmin):
+class UserAdmin(BaseUserAdmin):
     ordering = ('email',)
-    list_display = ('email', 'full_name', 'is_staff', 'is_active')
-    list_filter = ('is_staff', 'is_active')
-    search_fields = ('email', 'full_name', 'phone_number')
-
+    list_display = ('email', 'first_name', 'last_name', 'is_staff', 'is_active')
+    search_fields = ('email', 'first_name', 'last_name')
+    
     fieldsets = (
-        (None, {'fields': ('email', 'password', 'full_name', 'bio', 'avatar', 'phone_number')}),
+        (None, {'fields': ('email', 'password')}),
+        ('Personal info', {'fields': ('first_name', 'last_name', 'bio', 'avatar')}),
         ('Permissions', {'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')}),
         ('Important dates', {'fields': ('last_login', 'date_joined')}),
     )
-
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': ('email', 'full_name', 'password1', 'password2', 'bio', 'avatar', 'phone_number', 'is_active', 'is_staff')}
-        ),
+            'fields': ('email', 'password1', 'password2', 'first_name', 'last_name', 'bio', 'avatar'),
+        }),
     )
 
-    filter_horizontal = ('groups', 'user_permissions',)
+    def get_fieldsets(self, request, obj=None):
+        fieldsets = super().get_fieldsets(request, obj)
+        new_fieldsets = []
+        for name, opts in fieldsets:
+            if 'username' in opts.get('fields', ()):
+                opts['fields'] = tuple(f for f in opts['fields'] if f != 'username')
+            new_fieldsets.append((name, opts))
+        return new_fieldsets
+
+admin.site.register(CustomUser, UserAdmin)
+admin.site.register(PasswordResetToken)

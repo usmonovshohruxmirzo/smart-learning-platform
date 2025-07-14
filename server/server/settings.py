@@ -42,18 +42,31 @@ INSTALLED_APPS = [
     'corsheaders',
 
     'apps.courses',
-    'apps.students',
     'apps.reviews',
     'apps.accounts',
     'apps.notifications',
     'apps.quiz',
 ]
 
-AUTH_USER_MODEL = 'accounts.StudentModel'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+
+AUTH_USER_MODEL = 'accounts.CustomUser'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'usmonovshohruxmirzo@gmail.com'
+EMAIL_HOST_PASSWORD = 'afdr spac ftwo kcnk'
+DEFAULT_FROM_EMAIL = 'usmonovshohruxmirzo@gmail.com'
+
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
 }
 
