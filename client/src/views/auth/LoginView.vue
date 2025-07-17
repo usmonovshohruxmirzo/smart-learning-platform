@@ -51,8 +51,13 @@ const handleLogin = async () => {
         Login
       </button>
       <p class="text-center text-gray-500">
+        <router-link to="/forgot-password/request" class="text-blue-600 hover:underline"
+          >Forgot Password?</router-link
+        >
+      </p>
+      <p class="text-center text-gray-500">
         Don't have an account?
-        <a href="/register" class="text-blue-600 hover:underline">Register</a>
+        <router-link to="/register" class="text-blue-600 hover:underline">Register</router-link>
       </p>
     </form>
   </div>

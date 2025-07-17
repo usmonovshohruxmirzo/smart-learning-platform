@@ -65,18 +65,6 @@ const handleRegister = async () => {
         required
       />
       <input
-        v-model="bio"
-        type="text"
-        placeholder="Bio (optional)"
-        class="border border-gray-300 rounded-lg p-3 text-black"
-      />
-      <input
-        v-model="phoneNumber"
-        type="text"
-        placeholder="Phone Number (optional)"
-        class="border border-gray-300 rounded-lg p-3 text-black"
-      />
-      <input
         @change="(e) => (avatar.value = e.target.files[0])"
         type="file"
         class="border border-gray-300 rounded-lg p-3 text-black"
