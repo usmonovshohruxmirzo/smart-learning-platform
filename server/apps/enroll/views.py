@@ -8,6 +8,8 @@ from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from rest_framework.generics import RetrieveAPIView
 from django.shortcuts import get_object_or_404
+from django.utils import timezone
+from rest_framework.views import APIView
 
 class EnrollView(generics.CreateAPIView):
     permission_classes = [IsAuthenticated]
@@ -54,6 +56,26 @@ class EnrollmentDetailView(RetrieveAPIView):
     queryset = Enrollment.objects.all()
     serializer_class = EnrollmentSerializer
     
+class CourseCompleteView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request, course_id):
+        course = get_object_or_404(Course, id=course_id)
+        enrollment = get_object_or_404(Enrollment, student=request.user, course=course)
+
+        total_lessons = Lesson.objects.filter(module__course=course).count()
+        completed_lessons = LessonProgress.objects.filter(enrollment=enrollment, completed=True).count()
+
+        if total_lessons == 0:
+            return Response({'detail': 'No lessons found for this course.'}, status=400)
+
+        if completed_lessons < total_lessons:
+            return Response({'detail': 'All lessons are not completed yet.'}, status=400)
+
+        enrollment.mark_completed()
+
+        return Response({'course_completed': True, 'completed_at': enrollment.completed_at})
+
 @login_required
 def get_user_enrollments(request):
     user = request.user
@@ -87,3 +109,4 @@ def get_user_enrollments(request):
         })
     
     return JsonResponse({"enrolled_courses": data})
+    
