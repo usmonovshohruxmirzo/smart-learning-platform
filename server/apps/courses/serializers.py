@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import Course, Module, Lesson, LessonQuiz, QuizOption
+from apps.enroll.models import Enrollment
 
 class QuizOptionSerializer(serializers.ModelSerializer):
     class Meta:
@@ -41,15 +42,11 @@ class ModuleSerializer(serializers.ModelSerializer):
 
 class CourseSerializer(serializers.ModelSerializer):
     modules = ModuleSerializer(many=True, read_only=True)
+    students_enrolled = serializers.SerializerMethodField()
 
     class Meta:
         model = Course
-        fields = [
-            'id',
-            'title',
-            'description',
-            'visibility',
-            'created_at',
-            'instructor',
-            'modules',
-        ]
+        fields = "__all__"
+
+    def get_students_enrolled(self, obj):
+        return obj.enrollments.count()

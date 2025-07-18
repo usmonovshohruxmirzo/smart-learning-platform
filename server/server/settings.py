@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'apps.accounts',
     'apps.notifications',
     'apps.quiz',
+    'apps.enroll',
 ]
 
 MEDIA_URL = '/media/'
