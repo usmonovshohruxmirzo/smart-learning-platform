@@ -7,7 +7,7 @@ from .serializers import EnrollmentSerializer
 from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from rest_framework.generics import RetrieveAPIView
-
+from django.shortcuts import get_object_or_404
 
 class EnrollView(generics.CreateAPIView):
     permission_classes = [IsAuthenticated]
@@ -27,7 +27,7 @@ class MarkLessonCompleteView(generics.UpdateAPIView):
     
     def post(self, request, *args, **kwargs):
         lesson_id = request.data.get('lesson_id')
-        lesson = Lesson.objects.get(id=lesson_id)
+        lesson = get_object_or_404(Lesson, id=lesson_id)
         enrollment = Enrollment.objects.get(student=request.user, course=lesson.module.course)
         progress, created = LessonProgress.objects.get_or_create(enrollment=enrollment, lesson=lesson)
         progress.completed = True
